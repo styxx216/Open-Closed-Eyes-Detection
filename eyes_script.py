@@ -96,7 +96,7 @@ model(img_set[3060][0])
 pathes = []
 labels = []
 
-for i in range(4):
+for i in range(n):
     pred = np.round(model(img_set[i][0]).detach().numpy())[0][0]
     pathes.append(img_set[i][1])
     labels.append(int(pred))
