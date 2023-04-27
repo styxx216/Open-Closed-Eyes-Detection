@@ -96,4 +96,4 @@ for i in range(n):
 
 df = pd.DataFrame({'путь-до-файла':pathes, 'метка-класса':labels})
 
-df.to_csv('.//result.csv')
+df.to_csv('./result.csv')
