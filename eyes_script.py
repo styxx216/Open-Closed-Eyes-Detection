@@ -22,8 +22,7 @@ print(device)
 
 
 PATH_TO_MODEL = 'https://github.com/styxx216/EYES_TEST/blob/main/test_model.pth?raw=true'
-PATH_TO_FILES = '/content/drive/MyDrive/TEST_TASK/train'
-
+PATH_TO_FILES = sys.argv[1]
 class dataset(Dataset):
     def __init__(self, path,transform=None):
         self.path = path
