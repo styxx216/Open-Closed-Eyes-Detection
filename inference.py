@@ -11,8 +11,6 @@ import torch.nn.functional as F
 
 device = 'cpu'
 
-
-
 PATH_TO_MODEL = 'test_model.pth'
 PATH_TO_FILES = sys.argv[1]
 class dataset(Dataset):
@@ -36,8 +34,6 @@ class dataset(Dataset):
 img_set = dataset(PATH_TO_FILES)
 
 n= len(img_set)
-
-
 
 class Encoder(torch.nn.Module):
     def __init__(self):
