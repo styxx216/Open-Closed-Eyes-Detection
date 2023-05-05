@@ -77,8 +77,8 @@ class TestModel(torch.nn.Module):
         super().__init__()
         self.encoder = Encoder()
 
-        self.fc_1 = torch.nn.Linear(3*3*16, 512)
-        self.fc_2 = torch.nn.Linear(512, 1)
+        self.fc_1 = torch.nn.Linear(3*3*16, 256)
+        self.fc_2 = torch.nn.Linear(256, 1)
         self.dropout = torch.nn.Dropout()
     def forward(self,x):
         x = self.encoder(x)
@@ -91,9 +91,10 @@ class TestModel(torch.nn.Module):
         x = torch.sigmoid(x)
 
         return x
+         
 
 model = TestModel()
-model.load_state_dict(PATH_TO_MODEL, map_location=device))
+model.load_state_dict(torch.load(PATH_TO_MODEL))
 
 pathes = []
 labels = []
